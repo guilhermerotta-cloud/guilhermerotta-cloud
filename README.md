@@ -18,7 +18,8 @@ This project demonstrates the deployment of a highly available, fault-tolerant, 
 ### 1️⃣ Public Accessibility via Application Load Balancer
 The screenshot below proves the architecture is fully public and active. Ingress HTTP requests hitting the persistent public DNS link of the AWS Application Load Balancer are successfully decrypted, evaluated, and forwarded to the operational Apache web servers on the backend.
 
-![Uploading application-load-balancer-success.png…]()
+![Application Load Balancer Success](application-load-balancer-success.png)
+
 
 
 
@@ -27,7 +28,7 @@ The screenshot below proves the architecture is fully public and active. Ingress
 ### 2️⃣ Automated Self-Healing & Failover Verification
 To validate the resilient nature of Section 8 architecture, a manual node termination was executed to trigger an artificial infrastructure crash. As documented below, the AWS Auto Scaling control loops immediately detected the capacity deficit, isolated the faulty instance as **Unhealthy/Terminating**, and autonomously provisioned a fresh replacement node back into **InService** state to cure the cluster with zero manual intervention.
 
-*(Insert your auto-scaling-self-healing-success.png here)*
+![Auto Scaling Self-Healing Success](auto-scaling-self-healing-success.png)
 
 ---
 
